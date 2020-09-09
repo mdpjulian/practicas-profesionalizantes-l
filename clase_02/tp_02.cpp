@@ -23,7 +23,7 @@ int main()
     FileData files[1000];
     ofstream archivo;
     ifstream leerArchivo;
-    string datoNombre, datoPeso, tipoPeso, nombreAsignado, frase, linea;
+    string datoNombre, datoPeso, tipoPeso, nombreAsignado, frase;
     int pesoAsignado;
 
     archivo.open("canciones.txt");
