@@ -15,7 +15,6 @@ typedef struct{
 typedef Alumno tAlumno[MAX];
 tAlumno alumno;
 
-void leerArchivo();
 void escribirArchivo(string fecha);
 void ejecutarSwitch(int opcion, string fecha);
 void agregarNuevoAlumno();
@@ -45,7 +44,6 @@ void ejecutarSwitch(int opcion, string fecha){
 			agregarNuevoAlumno();
 			break;
 		case 0:
-			cout << i;
 			cout << "Fin del programa!";
 			escribirArchivo(fecha);
 			break;
