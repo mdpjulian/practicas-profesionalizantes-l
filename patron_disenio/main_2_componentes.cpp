@@ -6,9 +6,8 @@
 
 
 ///////////////////////////////////////////ICOMPONENT-INTERFACE///////////////////////////////////////////////
-///////////////////////////////////////////VERSION CON 1 SOLO COMPONENTE/INTERFAZ///////////////////////////////////////////////
+//////////////////////////////////////VERSION CON DOBLE INFERFAZ Y HERENCIA MULTIPLE EN FOLDER////////////////
 
-#include <iostream>
 #include <vector>
 #include <algorithm>
 
@@ -19,10 +18,17 @@ class ListComponent
         virtual void list(int depth) = 0; //operation
        
 };
+class IFileSystemComponent
+{
+    public:
+        virtual ~IFileSystemComponent(){};
+        virtual void add(ListComponent* component) = 0;
+        virtual void remove(ListComponent* component) = 0;
+};
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////COMPOSITE///////////////////////////////////////////////////////
-class Folder : public ListComponent
+class Folder : public IFileSystemComponent, public ListComponent
 {
     private:
         std::string m_nodeName;
